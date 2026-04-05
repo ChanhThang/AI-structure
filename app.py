@@ -73,7 +73,8 @@ with tab1:
         x=np.linspace(0, L, num_points),
         y=np.linspace(0, B, num_points),
         colorscale='Viridis',
-        hovertemplate='X: %{x}m<br>Y: %{y}m<br>M11: %{z:.2f} kNm<extra></extra>'
+        hovertemplate='X: %{x}m<br>Y: %{y}m<br>M11: %{z:.2f} kNm<extra></extra>',
+        zsmooth='best'  # <--- THÊM DÒNG NÀY ĐỂ LÀM MỊN HEATMAP
     ))
     fig1.update_layout(title="Phân bố Momen M11", xaxis_title="Chiều dài (m)", yaxis_title="Chiều rộng (m)")
     st.plotly_chart(fig1, use_container_width=True)
@@ -84,7 +85,8 @@ with tab2:
         x=np.linspace(0, L, num_points),
         y=np.linspace(0, B, num_points),
         colorscale='Hot',
-        hovertemplate='X: %{x}m<br>Y: %{y}m<br>M22: %{z:.2f} kNm<extra></extra>'
+        hovertemplate='X: %{x}m<br>Y: %{y}m<br>M22: %{z:.2f} kNm<extra></extra>',
+        zsmooth='best'  # <--- THÊM DÒNG NÀY ĐỂ LÀM MỊN HEATMAP
     ))
     fig2.update_layout(title="Phân bố Momen M22", xaxis_title="Chiều dài (m)", yaxis_title="Chiều rộng (m)")
     st.plotly_chart(fig2, use_container_width=True)
